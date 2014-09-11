@@ -1,1 +1,4 @@
-this is new
+.board_title
+  %input{name: "board[title]", type: "text"}
+.board_content
+  %textarea{name: "board[content]"}

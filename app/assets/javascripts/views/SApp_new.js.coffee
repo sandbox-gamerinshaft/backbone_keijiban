@@ -1,6 +1,6 @@
 class SApp.Views.NewView extends Backbone.View
   className: "newBoard"
-  tagName:   "div"
+  tagName:   "form"
   template:  JST["boards/new"]
 
   render: ->
