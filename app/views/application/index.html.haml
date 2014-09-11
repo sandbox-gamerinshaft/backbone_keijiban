@@ -2,5 +2,5 @@
 
 :coffeescript
   $ ->
-    view = new SApp.Views.IndexView()
-    $("#boards").html(view.render().el)
+    new SApp.Routers.SAppRouter()
+    Backbone.history.start()
