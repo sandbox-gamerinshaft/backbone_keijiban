@@ -3,14 +3,23 @@ class SApp.Views.SAppView extends Backbone.View
   template:  JST["application/index"]
 
   events:
-    "click #new" : "new"
+    "click #openNew"  : "openNew"
+    "click #closeNew" : "closeNew"
 
   render: ->
     @$el.html @template()
     return @
 
-  new: (e)->
+  openNew: (e)->
     e.preventDefault()
     e.stopPropagation
+    $("new").html('<a href="#new" id="closeNew">閉じる</a>')
     view = new SApp.Views.NewView()
     $("#create").html(view.render().el)
+
+  closeNew: (e)->
+    e.preventDefault()
+    e.stopPropagation
+    $("new").html('<a href="#new" id="openNew">新しく掲示板を作る</a>')
+    $("#create").html("")
+
