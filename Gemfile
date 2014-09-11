@@ -38,3 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'backbone-on-rails'
+gem "ruby-haml-js"
+gem 'haml-rails'
+gem 'bootstrap-sass'
+
