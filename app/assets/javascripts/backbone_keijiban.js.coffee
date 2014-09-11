@@ -1,4 +1,4 @@
-window.BackboneKeijiban =
+window.SApp =
   Models: {}
   Collections: {}
   Views: {}
