@@ -11,3 +11,7 @@ class SApp.Routers.SAppRouter extends Backbone.Router
   application: ->
     view = new SApp.Views.SAppView()
     $("#app").html(view.render().el)
+
+  new: ->
+    view = new SApp.Views.NewView()
+    $("#create").html(view.render().el)
