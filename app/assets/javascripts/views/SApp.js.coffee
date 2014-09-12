@@ -14,7 +14,7 @@ class SApp.Views.SAppView extends Backbone.View
     e.preventDefault()
     e.stopPropagation
     $("new").html('<a href="#new" id="closeNew">閉じる</a>')
-    view = new SApp.Views.NewView()
+    view = new SApp.Views.NewView(boards : @boards)
     $("#create").html(view.render().el)
 
   closeNew: (e)->
