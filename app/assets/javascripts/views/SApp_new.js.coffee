@@ -8,7 +8,6 @@ class SApp.Views.NewView extends Backbone.View
 
   constructor: (options)->
     super()
-    @boards = options.boards
     @board  = new SApp.Models.Boards()
 
   render: ->
