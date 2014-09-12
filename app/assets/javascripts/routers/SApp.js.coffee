@@ -17,7 +17,11 @@ class SApp.Routers.SAppRouter extends Backbone.Router
     view = new SApp.Views.SAppView(boards: boards)
     $("#app").html(view.render().el)
     boards.each (board) ->
-      view.index(board: board)
+      view.index(board : board)
+    boards.on "add", (board)->
+      view.index(board : board)
+
+
 
 
 

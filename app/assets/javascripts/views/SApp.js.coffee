@@ -5,10 +5,10 @@ class SApp.Views.SAppView extends Backbone.View
   events:
     "click #openNew"  : "openNew"
     "click #closeNew" : "closeNew"
-
   constructor: (options)->
     super()
-    console.log options.boards
+    @boards = options.boards
+
   render: ->
     @$el.html @template()
     return @
@@ -22,7 +22,7 @@ class SApp.Views.SAppView extends Backbone.View
     e.preventDefault()
     e.stopPropagation
     $("new").html('<a href="#new" id="closeNew">閉じる</a>')
-    view = new SApp.Views.NewView()
+    view = new SApp.Views.NewView(boards : @boards)
     $("#create").html(view.render().el)
 
   closeNew: (e)->
