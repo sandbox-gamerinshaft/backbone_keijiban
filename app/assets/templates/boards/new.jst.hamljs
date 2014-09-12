@@ -2,3 +2,5 @@
   %input{name: "board[title]", type: "text"}
 .board_content
   %textarea{name: "board[content]"}
+.board_submit
+  %input{type: "submit", value: "作成する"}
