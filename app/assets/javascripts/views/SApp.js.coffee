@@ -6,9 +6,17 @@ class SApp.Views.SAppView extends Backbone.View
     "click #openNew"  : "openNew"
     "click #closeNew" : "closeNew"
 
+  constructor: (options)->
+    super()
+    console.log options.boards
   render: ->
     @$el.html @template()
     return @
+
+  index: (options)->
+    board = options.board
+    view = new SApp.Views.IndexView(board: board)
+    $("index").append(view.render().el)
 
   openNew: (e)->
     e.preventDefault()

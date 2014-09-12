@@ -1,3 +1,2 @@
-%a#hoge
-  new
-this is index
+= board.get("title")
+= board.get("content")

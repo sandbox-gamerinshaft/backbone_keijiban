@@ -2,4 +2,5 @@
   %a#openNew{href: "#new"}
     新しく掲示板を作る
 #create
-#index
+%index
+
