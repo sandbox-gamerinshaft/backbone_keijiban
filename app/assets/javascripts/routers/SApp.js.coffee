@@ -9,6 +9,7 @@ class SApp.Routers.SAppRouter extends Backbone.Router
     $("#boards").html(view.render().el)
 
   application: ->
+    boards = new SApp.Collections.SAppColletcion()
     view = new SApp.Views.SAppView()
     $("#app").html(view.render().el)
 
