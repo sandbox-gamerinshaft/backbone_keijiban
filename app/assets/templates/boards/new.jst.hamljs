@@ -1,6 +1,6 @@
 .board_title
-  %input{name: "board[title]", type: "text"}
+  %input{name: "title", type: "text"}
 .board_content
-  %textarea{name: "board[content]"}
+  %textarea{name: "content"}
 .board_submit
   %input{type: "submit", value: "作成する"}

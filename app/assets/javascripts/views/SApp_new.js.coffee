@@ -17,3 +17,15 @@ class SApp.Views.NewView extends Backbone.View
   save: (e)->
     e.preventDefault()
     e.stopPropagation()
+    @board.set
+      "title" : $(@template).find("[name=title]").val()
+      "content" : $(@template).find("[name=content]").val()
+    @board.save null,
+      success: (box) =>
+        alert "good job"
+        # @boxes.add box
+        # @box = new BBBox.Models.Boxes()
+        # $(@template).find("textarea").val("")
+      error: =>
+        alert "waa"
+
