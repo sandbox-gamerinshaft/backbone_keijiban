@@ -3,13 +3,17 @@ class SApp.Routers.SAppRouter extends Backbone.Router
     "index" : "index"
     "new"   : "new"
     ""      : "application"
+  constructor: (options)->
+    super()
+    @boards = options.boards
+
 
   index: ->
     view = new SApp.Views.IndexView()
     $("#boards").html(view.render().el)
 
   application: ->
-    boards = new SApp.Collections.SAppColletcion()
+    boards = new SApp.Collections.SAppColletcion(@boards)
     view = new SApp.Views.SAppView()
     $("#app").html(view.render().el)
 

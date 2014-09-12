@@ -2,5 +2,5 @@
 
 :coffeescript
   $ ->
-    new SApp.Routers.SAppRouter()
+    new SApp.Routers.SAppRouter(boards : #{@boards.to_json.html_safe})
     Backbone.history.start()
